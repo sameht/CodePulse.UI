@@ -11,7 +11,7 @@
                     <th>Title</th>
                     <th>Short Desciption</th>
                     <th>Is Visible</th>
-                    <th></th>
+                    <th>Categories</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,7 +20,9 @@
                     <td>{{blogPost.shortDescription}}</td>
                     <td>{{blogPost.isVisible}}</td>
                     <td>
-                        <button class="btn btn-light" (click)="onEditClicked()">Edit</button>
+                        <span *ngFor="let category of blogPost.categories">
+                            <span class="badge text-bg-secondary me-2">{{category.name}}</span>
+                        </span>
                     </td>
                 </tr>
             </tbody>
