@@ -17,7 +17,4 @@ export class BlogpostListComponent implements OnInit{
   ngOnInit(): void {
     this.blogPosts$ = this.blogPostService.getAllBlogPostes();
   }
-  onEditClicked(){ 
-  
-  }
 }
